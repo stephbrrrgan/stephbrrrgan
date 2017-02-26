@@ -1,0 +1,185 @@
+{
+   "type": "FeatureCollection",
+   "features": [
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9509415,40.4374713 ]
+    },
+    "properties": {
+    "Location":"Home",
+    "Days":14,
+    "Hours":225.25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9542408,40.4417146 ]
+    },
+    "properties": {
+    "Location":"Posvar Hall",
+    "Days":10,
+    "Hours":45.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.956956,40.441282 ]
+    },
+    "properties": {
+    "Location":"Brueggers",
+    "Days":4,
+    "Hours":16.5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.953239,40.4442526 ]
+    },
+    "properties": {
+    "Location":"Cathedral",
+    "Days":10,
+    "Hours":22.25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9650084,40.4462994 ]
+    },
+    "properties": {
+    "Location":"Cost",
+    "Days":2,
+    "Hours":3.25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9569887,40.4413772 ]
+    },
+    "properties": {
+    "Location":"Stack'd",
+    "Days":2,
+    "Hours":5
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9580428,40.4411466 ]
+    },
+    "properties": {
+    "Location":"Chipotle",
+    "Days":1,
+    "Hours":0.25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.952702,40.433275 ]
+    },
+    "properties": {
+    "Location":"Parkview",
+    "Days":1,
+    "Hours":4
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9576632,40.4395012 ]
+    },
+    "properties": {
+    "Location":"Semple",
+    "Days":1,
+    "Hours":2
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9552915,40.4352266 ]
+    },
+    "properties": {
+    "Location":"Welsford",
+    "Days":1,
+    "Hours":1
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9574176,40.4417824 ]
+    },
+    "properties": {
+    "Location":"Peter's",
+    "Days":1,
+    "Hours":0.75
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9348768,40.458127 ]
+    },
+    "properties": {
+    "Location":"Aldi",
+    "Days":1,
+    "Hours":1.25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9545159,40.4436495 ]
+    },
+    "properties": {
+    "Location":"Study Abroad Office",
+    "Days":1,
+    "Hours":0.25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9574235,40.4441659 ]
+    },
+    "properties": {
+    "Location":"Thackery",
+    "Days":2,
+    "Hours":0.25
+    }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -79.9589211,40.4450359 ]
+    },
+    "properties": {
+    "Location":"Behind VA Hospital",
+    "Days":1,
+    "Hours":1.5
+    }
+  }
+]
+}
