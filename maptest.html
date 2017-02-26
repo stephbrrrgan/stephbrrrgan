@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>A Leaflet map!</title>
-  <link rel="stylesheet" href="https://github.com/stephbrrrgan/synthesis1/blob/master/java/leaflet.css"/>
-  <script src="https://github.com/stephbrrrgan/synthesis1/blob/master/java/leaflet-src.js"></script>
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src="jquery-3.1.0.min.js"></script>
   <style>
     #map{ width: 900px; height: 500px; }
   </style>
@@ -14,16 +15,29 @@
 
   <script>
 
-  // initialize the map
-  var map = L.map('map').setView([42.35, -71.08], 13);
+  var map = L.map('map',{
+    center: [40.44, -79.95],
+    zoom: 16
+    });
 
-  // load a tile layer
-  L.tileLayer('http://tiles.mapc.org/basemap/{z}/{x}/{y}.png',
-    {
-      attribution: 'Tiles by <a href="http://mapc.org">MAPC</a>, Data by <a href="http://mass.gov/mgis">MassGIS</a>',
-      maxZoom: 17,
-      minZoom: 9
+    L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
+
+
+ // load GeoJSON from an external file
+  $.getJSON("convertcsv.geojson",function(data){
+    var girlIcon = L.icon({
+      iconUrl: 'https://cdn2.iconfinder.com/data/icons/human-resources-1/500/girl-512.png',
+      iconSize: [1000,500]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+	    return L.marker(latlng,{icon: girlIcon});
+      }
+    }).addTo(map);
+  });
+
 
   </script>
 </body>
