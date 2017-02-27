@@ -182,6 +182,19 @@ L.marker([40.433275, -79.952702], {icon: parkviewIcon}).addTo(map).bindPopup("<s
 L.marker([40.4417824
 , -79.9574176], {icon: barIcon}).addTo(map).bindPopup("<strong>Get-Together</strong><br> Hours here: .75");
 
+$.getJSON("convertcsv.geojson",function(data){
+    var homeIcon = L.icon({
+      iconUrl: 'http://mosmedstat.ru/wp-content/themes/test_microsite_theme/images/home-home-icon.png',
+      iconSize: [60,50]
+    });
+    L.geoJson(data,{
+      pointToLayer: function(feature,latlng){
+	    return L.marker(latlng,{icon: homeIcon});
+      }
+    }).addTo(map);
+  });    
+    
+    
   </script>
 </body>
 </html>
