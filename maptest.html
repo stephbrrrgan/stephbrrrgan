@@ -1,43 +1,182 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>A Leaflet map!</title>
+  <title>Where have I been?</title>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"/>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script src="jquery-3.1.0.min.js"></script>
   <style>
-    #map{ width: 900px; height: 500px; }
+    #map{ width: 900px; height: 500px;
+    margin-right: auto;
+    margin-left: auto;}
+    h1 {text-align: center;
+    	font-family: sans-serif;}
+    p {text-align: center;
+    	font-family: sans-serif;}
+    html {background-color: #8FBC8F;}
   </style>
 </head>
 <body>
-
+ <h1> Where have I been?</h1>
+ <p> Here is a look at where I have been, and for how long, around Oakland these past two weeks. </p>
   <div id="map"></div>
-
+<p> By Stephanie Bergan </p>
   <script>
 
   var map = L.map('map',{
     center: [40.44, -79.95],
-    zoom: 16
+    zoom: 15
     });
 
     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
+var clIcon = L.icon({
+    iconUrl: 'https://cdn1.iconfinder.com/data/icons/education-vol-2-1/64/091-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4442526
+,-79.953239
+], {icon: clIcon}).addTo(map);
 
- // load GeoJSON from an external file
-  $.getJSON("convertcsv.geojson",function(data){
-    var girlIcon = L.icon({
-      iconUrl: 'https://cdn2.iconfinder.com/data/icons/human-resources-1/500/girl-512.png',
-      iconSize: [1000,500]
-    });
-    L.geoJson(data,{
-      pointToLayer: function(feature,latlng){
-	    return L.marker(latlng,{icon: girlIcon});
-      }
-    }).addTo(map);
-  });
+var posvarIcon = L.icon({
+    iconUrl: 'https://cdn1.iconfinder.com/data/icons/education-vol-2-1/64/091-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4417146
+, -79.9542408
+], {icon: posvarIcon}).addTo(map);
 
+var homeIcon = L.icon({
+    iconUrl: 'http://mosmedstat.ru/wp-content/themes/test_microsite_theme/images/home-home-icon.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4374713
+, -79.9509415
+], {icon: homeIcon}).addTo(map);
+
+L.marker([40.4374713, -79.9509415], {icon: homeIcon}).addTo(map).bindPopup("<strong>Home</strong><br>Hours here: 225.25");
+L.marker([40.4417146, -79.9542408], {icon: posvarIcon}).addTo(map).bindPopup("<strong>Work and Class</strong><br>ours here: 45.5");
+L.marker([40.4442526,-79.953239], {icon: clIcon}).addTo(map).bindPopup("<strong>Classes</strong><br> Hours here: 22.25");
+
+
+var aldiIcon = L.icon({
+    iconUrl: 'https://cdn2.iconfinder.com/data/icons/maki/100/fast-food-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.458127
+, -79.9348768
+], {icon: aldiIcon}).addTo(map);
+
+var chipIcon = L.icon({
+    iconUrl: 'https://cdn2.iconfinder.com/data/icons/maki/100/fast-food-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4411466
+, -79.9580428
+], {icon: chipIcon}).addTo(map);
+
+var bagelIcon = L.icon({
+    iconUrl: 'https://cdn3.iconfinder.com/data/icons/breakfast-icons/455/Bagel-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.441282
+, -79.956956
+], {icon: bagelIcon}).addTo(map);
+
+L.marker([40.441282, -79.956956], {icon: bagelIcon}).addTo(map).bindPopup("<strong>Work</strong><br>Hours here: 16.5");
+L.marker([40.4411466, -79.9580428], {icon: chipIcon}).addTo(map).bindPopup("<strong>Take-out</strong><br>Hours here: .25");
+L.marker([40.458127, -79.9348768], {icon: aldiIcon}).addTo(map).bindPopup("<strong>Grocery Shopping</strong><br> Hours here: 1.25");
+
+
+var saoIcon = L.icon({
+    iconUrl: 'https://cdn2.iconfinder.com/data/icons/people-7/256/Student_Girl-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4436495
+, -79.9545159
+], {icon: saoIcon}).addTo(map);
+
+var thackIcon = L.icon({
+    iconUrl: 'https://cdn2.iconfinder.com/data/icons/people-7/256/Student_Girl-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4441659
+, -79.9574235
+], {icon: thackIcon}).addTo(map);
+
+var soccerIcon = L.icon({
+    iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/2034-200.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.44783700811095
+, -79.96399462223053
+], {icon: soccerIcon}).addTo(map);
+
+L.marker([40.44783700811095, -79.96399462223053], {icon: soccerIcon}).addTo(map).bindPopup("<strong>Pick-up Game</strong><br>Hours here: 1.5");
+L.marker([40.4441659, -79.9574235], {icon: thackIcon}).addTo(map).bindPopup("<strong>Work Delivieries</strong><br>Hours here: .5");
+L.marker([40.4436495, -79.9545159], {icon: saoIcon}).addTo(map).bindPopup("<strong>Study Abroad Office</strong><br> Hours here: .25");
+
+
+var practiceIcon = L.icon({
+    iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/2034-200.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4462994
+, -79.9650084
+], {icon: practiceIcon}).addTo(map);
+
+
+var stackIcon = L.icon({
+    iconUrl: 'https://cdn2.iconfinder.com/data/icons/maki/100/fast-food-512.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4413772
+, -79.9569887
+], {icon: stackIcon}).addTo(map);
+
+var sempleIcon = L.icon({
+    iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/117346-200.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4395012
+, -79.9576632
+], {icon: sempleIcon}).addTo(map);
+
+L.marker([40.4395012, -79.9576632], {icon: sempleIcon}).addTo(map).bindPopup("<strong>Get-Together</strong><br>Hours here: 2");
+L.marker([40.4413772, -79.9569887], {icon: stackIcon}).addTo(map).bindPopup("<strong>Trivia Night at Stack'd</strong><br>Hours here: 4");
+L.marker([40.4462994, -79.9650084], {icon: practiceIcon}).addTo(map).bindPopup("<strong>Practice</strong><br> Hours here: 3.25");
+
+var barIcon = L.icon({
+    iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/117346-200.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4417824
+, -79.9574176
+], {icon: barIcon}).addTo(map);
+
+var parkviewIcon = L.icon({
+    iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/117346-200.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.433275
+, -79.952702
+], {icon: parkviewIcon}).addTo(map);
+
+var welsfordIcon = L.icon({
+    iconUrl: 'https://d30y9cdsu7xlg0.cloudfront.net/png/117346-200.png',
+    iconSize:     [45, 45], // size of the icon
+});
+L.marker([40.4352266
+, -79.9552915
+], {icon: welsfordIcon}).addTo(map);
+
+L.marker([40.4352266
+, -79.9552915], {icon: welsfordIcon}).addTo(map).bindPopup("<strong>Get-Together</strong><br>Hours here: 1");
+L.marker([40.433275, -79.952702], {icon: parkviewIcon}).addTo(map).bindPopup("<strong>Get-Together</strong><br>Hours here: 4");
+L.marker([40.4417824
+, -79.9574176], {icon: barIcon}).addTo(map).bindPopup("<strong>Get-Together</strong><br> Hours here: .75");
 
   </script>
 </body>
